@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap");
+
+* {
+  text-transform: capitalize;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+
+@media only screen and (max-width: 600px) {
+    .container form i {
+      left: 0.5rem;
+      top: 1.2rem;
+    }
+    
+    form .message i {
+      top: 1.5rem;
+    }
+    
+    .field input,
+    .message textarea {
+      padding: 0 1rem;
+    }
+    
+    form .message textarea {
+      padding: 1rem;
+    }
+  }
+  
+.container {
+  width: 100%;
+  max-width: 40rem;
+  background-color: aliceblue;
+  border-radius: 0.3rem;
+  padding: 1rem;
+}
+
+.container header {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 1rem 0;
+  border-bottom: #203a43 1px solid;
+}
+
+.container fieldset {
+  border: none;
+}
+
+.container form {
+  margin: 1rem 0;
+}
+
+form .fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fields .field {
+  position: relative;
+  width: 100%;
+}
+
+.container form i {
+  left: 0.6rem;
+  top: 13px;
+  color: rgb(145, 153, 160);
+  position: absolute;
+  pointer-events: none;
+}
+
+form .message {
+  position: relative;
+}
+
+form .message i {
+  top: 2.35rem;
+}
+
+.field input,
+.message textarea {
+  font-size: 1rem;
+  height: 2.5rem;
+  outline: none;
+  width: 100%;
+  max-width: 36rem;
+  padding: 0 1rem 0 3rem;
+  border: #7e929ba1 1px solid;
+  border-radius: 0.2rem;
+}
+
+.field input::placeholder,
+.message textarea::placeholder {
+  color: rgb(145, 153, 160);
+}
+
+form .message textarea {
+  min-height: 6rem;
+  max-height: 24rem;
+  min-width: 10rem;
+  width: 100%;
+  max-width: 36rem;
+  padding: 1rem 1.2rem 0 3rem;
+  margin-top: 1rem;
+}
+
+form .field input:focus,
+form .message textarea:focus {
+  border: #1c84b4 0.15rem solid;
+}
+
+form .button-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 1.2rem 0;
+}
+
+.button-wrapper button {
+  padding: 0.7rem 1.6rem;
+  border: none;
+  background: #1c84b4;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.button-wrapper span {
+  color: #1c84b4;
+  margin-left: 1rem;
+  /* display: none; */
+}
