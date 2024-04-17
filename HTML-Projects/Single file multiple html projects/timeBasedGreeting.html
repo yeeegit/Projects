@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-transform: capitalize;
+        background-color: #8f660f;
+        color: antiquewhite;
+    }
+    .container{
+        width: 30em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 5em 1.5em;
+        border-radius: 0.5em;
+        box-shadow: 0 1.5em 2em rgba(190, 148, 70, 0.25);
+        font-size: 1.25em;
+        background: linear-gradient(to bottom, #6b4c0a, #b98826);
+        transform: translate(-50%,-50%);
+    }
+    .container h2 {
+        text-align: center;
+        word-spacing: .25em;
+        letter-spacing: .125em;
+        background-color: transparent;
+    }
+    </style>
+
+</head>
+<body>
+    
+<div class="container"><h2></h2></div>
+
+    <script>
+let container = document.querySelector(".container");
+let currentDate = new Date().getHours();
+
+    let greeting = currentDate >= 5 && currentDate < 12 ? "good morning" : currentDate >= 12 && currentDate < 18 ? "Good Afternoon" : "Good Evening";
+
+    container.querySelector("h2").textContent = `${greeting}`;
+
+    </script>
+</body>
+</html>

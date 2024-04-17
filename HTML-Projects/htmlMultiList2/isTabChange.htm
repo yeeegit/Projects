@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>in tab</title>
+    <style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+h3{
+    text-align: center;
+    top: 50%;
+    left: 50%;
+}
+    </style>
+</head>
+<body>
+    <h3>sum of text</h3>
+
+    <script>
+document.addEventListener("visibilitychange",function(){
+    document.visibilityState === "visible" ? document.title = "you are here":document.title = "no more";
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency-convert</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="full-bg">
+        <div class="wrapper">
+            <div class="app-details">
+                <h1 class="app-title">currency converter</h1>
+            </div>
+            <label for="amount">amount:</label>
+            <input type="number" id="amount" value="10">
+            <div class="dropdowns">
+                <select id="fromCurrency"></select>
+                <select id="toCurrency"></select>
+            </div>
+            <button id="convert-button">convert</button>
+            <p id="result"></p>
+        </div>
+
+    </div>
+    <script src="currency-codes.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

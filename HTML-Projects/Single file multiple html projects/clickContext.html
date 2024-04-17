@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Menu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            text-transform: capitalize;
+        }
+
+        body {
+            background-color: #f1dd25;
+        }
+
+        .context-menu {
+            background-color: #fff;
+            color: rgba(5, 5, 5, 0.87);
+            font-size: 1.5em;
+            width: 8em;
+            padding: 1em 0.8em;
+            visibility: hidden;
+            position: absolute;
+        }
+
+        .element {
+            padding: 0.5em 1em;
+            transition: 1s;
+        }
+
+        .element:hover {
+            cursor: pointer;
+            opacity: 0.7;
+            background-color: #66750d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="context-menu">
+        <div class="element">menu 1</div>
+        <div class="element">menu 2</div>
+        <div class="element">menu 3</div>
+        <div class="element">menu 4</div>
+    </div>
+
+    <script>
+        const events = ["contextmenu", "touchstart"];
+        let timeout;
+        let lastTap = 0;
+        const contextMenu = document.querySelector(".context-menu");
+
+        events.forEach((eventType) => {
+            document.addEventListener(eventType, (e) => {
+                e.preventDefault();
+                let mouseX = e.clientX || e.touches[0].clientX;
+                let mouseY = e.clientY || e.touches[0].clientY;
+
+                contextMenu.style.left = mouseX + "px";
+                contextMenu.style.top = mouseY + "px";
+
+                contextMenu.style.visibility = "visible";
+            }, { passive: false });
+        });
+
+        document.addEventListener("touchend", function (e) {
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTap;
+            clearTimeout(timeout);
+            if (tapLength < 500 && tapLength > 0) {
+                contextMenu.style.visibility = "hidden";
+                e.preventDefault();
+            } else {
+                timeout = setTimeout(function () {
+                    contextMenu.style.visibility = "hidden"; // Hide the context menu
+                    clearTimeout(timeout);
+                }, 500);
+            }
+            lastTap = currentTime;
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!contextMenu.contains(e.target)) {
+                contextMenu.style.visibility = "hidden";
+            }
+        }, { passive: false });
+    </script>
+</body>
+
+</html>

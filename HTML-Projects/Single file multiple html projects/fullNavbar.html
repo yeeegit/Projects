@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            text-transform: capitalize;
+            letter-spacing: 0.1em;
+        }
+        body{
+            background-color: #222121;
+        }
+        ul{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            transition: left 1s;
+            background: linear-gradient(45deg, #00ccff, #0f01cc);
+            left: -100%;
+            justify-content: center;
+        }
+        li{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        li:not(:last-child) {
+            margin-bottom: 2em;
+        }
+        ul a {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            width: 35%;
+            border-radius: 2em;
+            font-size: 2em;
+            transition: 0.5s;
+            padding: 0.1em 0;
+        }
+        ul a:hover {
+            background-color: #ebebebea;
+            color: #424242;
+            box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
+            transform: translateY(-0.1em);
+        }
+        i.fa,i.fas{
+            position: fixed;
+            height: 2em;
+            width: 2em;
+            display: inline-block;
+            top: 2em;
+            right: 2em;
+            text-align: center;
+            
+            color: #202020;
+            background-color: #fff;
+            font-size: 2em;
+            padding: 0.5em 0;
+            border-radius: 50%;
+            box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul id="navbar">
+        <li>
+            <a href="#">home</a>
+        </li>
+        <li>
+            <a href="#">plans</a>
+        </li>
+        <li>
+            <a href="#">contact</a>
+        </li>
+        <li>
+            <a href="#">about</a>
+        </li>
+    </ul>
+</nav>
+
+<i class="fas fa-bars" id="icon"></i>
+
+<script>
+    const icon = document.getElementById("icon");
+    const navbar = document.getElementById("navbar");
+
+    icon.addEventListener("click", function(){
+        if (icon.classList.contains("fa-bars")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+            navbar.style.left = "0";
+        } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+            navbar.style.left = "-100%";
+        }
+    });
+</script>
+</body>
+</html>

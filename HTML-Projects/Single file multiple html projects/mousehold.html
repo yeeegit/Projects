@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+            transition: 0.5s;
+        }
+
+        body {
+            background-color: #303030;
+        }
+
+        .container {
+            height: 30em;
+            width: 30em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #4d0505f3;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            border-radius: .5em;
+            padding: 0 1.5em;
+            box-shadow: 0 2em 4em rgba(255, 255, 255, 0.3);
+        }
+
+        #ref {
+            height: 10em;
+            width: 10em;
+            display: grid;
+            place-items: center;
+            font-size: 1.5em;
+            border-radius: 50%;
+            animation: pulse .5s infinite alternate;
+            color: #fff;
+        }
+
+        @keyframes pulse {
+            0% {
+                background-color: #1a1a1a;
+            }
+
+            100% {
+                background-color: #500a0a;
+            }
+        }
+
+        p {
+            width: 100%;
+            color: #fff;
+            border-radius: .5em;
+            font-size: 1.25em;
+            padding: 1em 0;
+            background-color: rgba(95, 95, 95, 0.404);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="ref">click here</div>
+        <p id="result">some text</p>
+    </div>
+    <script>
+        let ref = document.getElementById("ref");
+        let result = document.getElementById("result");
+        let MouseHold = false;
+
+        ref.addEventListener("mousedown", () => {
+            result.innerText = "You are holding Mouse";
+            result.style.backgroundColor = "#000";
+
+            MouseHold = true;
+        });
+
+        document.addEventListener("mouseup", () => {
+            result.innerText = "You are NOT holding mouse";
+            result.style.removeProperty('background-color');
+            MouseHold = false;
+        });
+
+        result.addEventListener("click", () => {
+            result.style.removeProperty('background-color');
+        });
+    </script>
+</body>
+
+</html>

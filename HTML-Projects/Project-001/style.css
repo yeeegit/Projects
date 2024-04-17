@@ -1,0 +1,515 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Quicksand:wght@300&display=swap');
+
+@media only screen and (max-width: 480px) { /* bu projede responsive navbar bulunmuyor */
+ 
+.menu-list{
+
+   margin-right: 10px;
+   font-size: 8px;
+}
+
+.menu-list li{
+   padding: 0px;
+   margin: -3px;
+   display: flex;
+
+}
+
+.menu-list a{
+   font-size: 5px;
+   display: flex;
+}
+
+.menu-list a:hover{
+padding: 0;
+border-radius: 8px;
+}
+
+.logo-wrapper{
+   
+   margin-left: 3px;
+   font-size: 11px;
+   display: flex;
+}
+
+
+
+}
+
+
+/* BASE CODE START */
+
+
+*{
+   box-sizing: border-box;
+   text-decoration: none;
+   outline: none;
+   margin: 0;
+   transition: 0.25s;
+   overflow-x: hidden;
+   text-transform: capitalize;
+   font-family: 'Quicksand', sans-serif;
+}
+
+body{
+ margin: 0;
+}
+
+
+/* BASE CODE END */
+
+
+/* HEADER-NAV SECTION START */
+
+ .navbar{
+   background-color: rgb(32, 32, 32);
+   display:flex;
+   height: 80px;
+   color: white;
+   justify-content: center;
+   overflow-y: hidden;
+
+ }
+
+.navbar:hover{
+   transition: 1s;
+   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5));
+}
+
+ .logo-wrapper{
+   justify-content: center;
+   text-decoration: none;
+   color: white;
+   font-size: 10px;
+   margin-top: 25px;
+   margin-bottom: 20px;
+   
+ }
+
+ .logo-wrapper a{
+   text-decoration: none;
+   color: white;
+   justify-content: space-between;
+ }
+
+ .logo-wrapper:hover{
+   transform: scale(1.1);
+   transition:0.4s;
+ }
+
+ .menu-list{
+   display: flex;
+   list-style: none;
+   padding: 10px 25px;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .menu-list li{
+   margin-top: 2px;
+   padding: 8px;
+ }
+
+ .menu-list a{
+   text-decoration: none;
+   color: white;
+   font-size:  14px;
+ }
+
+.menu-list a:hover{
+   background-color: dimgray;
+   color: azure;
+   padding: 6px;
+   border-radius: 10px;
+}
+
+.menu-list a:active{
+   background-color: rgba(240, 248, 255, 0.89);
+   color: rgba(19, 19, 19, 0.897);
+}
+
+/* HEADER-NAV SECTION END*/
+
+
+/* MAIN CONTENT START */
+
+.main-content{
+   margin-top: 10%;
+   font-size: 90%;
+   color: aliceblue;
+   justify-content: center;
+   text-align: center;
+}
+
+.background-image{
+   height: 100vh;
+   width: 100%;
+   background-image: linear-gradient(rgba(52, 52, 78, 0.753),rgba(0,0,0,0.75)),url(img/indir.jpg);
+   background-size:cover;
+   background-position: center;
+   overflow-y: hidden;
+   object-fit: cover;
+}
+
+.main-content h1{
+   color: rgba(202, 199, 194, 0.9);
+}
+
+.main-content p{
+   color: rgba(193, 193, 194, 0.925);
+}
+
+.main-buttons{
+   padding-top: 2rem;
+   text-align: center;
+   padding-left: 1%;
+}
+
+.main-buttons button{
+   margin: 15px 26px;
+   color: rgba(245, 241, 236, 0.863);
+   background-color: transparent;
+   border: 1px rgba(182, 182, 182, 0.911) solid;
+   border-radius: 2px;
+}
+
+.main-buttons button:hover{
+   transition: 0.5s;
+   background-color: rgba(255, 255, 255, 0.801);
+   color: rgb(73, 73, 73);
+   border-color: transparent;
+}
+
+.main-buttons button:active{
+   background-color: rgba(42, 33, 54, 0.699);
+   color: rgba(214, 214, 214, 0.863);
+   border-color: transparent;
+}
+
+/* MAIN CONTENT END */
+
+
+/* PLANS START */
+
+.plans{
+   padding-top: 30px;
+   padding-bottom: 30px;
+   text-align:center;
+   justify-content: center;
+   background-image: linear-gradient(rgba(53, 53, 54, 0.904),rgba(0,0,0,0.75)) , url(https://images.pond5.com/low-poly-background-dark-gray-086482555_prevstill.jpeg);
+   background-size: cover;
+   background-position: center;
+   overflow-y: hidden;
+   display:flexbox;
+}
+
+.plans h1{
+   margin-top: 30px;
+   font-weight: bold;
+   color: rgba(175, 169, 161, 0.863);
+   text-decoration: underline rgba(24, 24, 24, 0.856);
+   font-size: 35px;
+}
+
+.plan {
+   margin-top: 70px; margin-bottom: 70px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+
+}
+
+.plan .plan1{
+   
+   
+   height: 475px;
+   width: 276px;
+   margin-top: 10px;
+   margin-left: 50px;
+   border-radius: 10px;
+   background-color: rgba(153, 155, 156, 0.856);
+   box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.35);
+   margin-right: 50px;
+}
+
+.plan .plan2{
+   
+   margin-top: 10px;
+   margin-left: 50px;
+   border-radius: 20px;
+   height: 475px;
+   width: 276px;
+   background-color: rgba(153, 155, 156, 0.856);
+   box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.35);
+   margin-right: 50px;
+}
+
+.plan .plan3{
+   
+   margin-top: 10px;
+   margin-left: 50px;
+   border-radius: 20px;
+   height: 475px;
+   width: 276px;
+   background-color: rgba(153, 155, 156, 0.856);
+   box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.35);
+   margin-right: 50px;
+}
+
+.plan p{
+   margin-top: 30px;
+   margin-bottom: 20px;
+   margin-left: 10px;margin-right: 10px;
+   font-weight: 570;
+   font-size: 16px;
+}
+
+.plan h2{
+   margin-top: 25px;
+   margin-bottom: 10px;
+   color: rgba(66, 55, 42, 0.904);
+   font-weight: 600;
+}
+
+.plan h3{
+   margin-top: 20px;
+   margin-bottom: 15px;
+}
+
+.plan img{
+   width: 200px; height: 120px;
+   object-fit: cover;
+   border-radius: 5px;
+   opacity: 0.83;
+   border: 1px solid rgba(104, 102, 102, 0.87);
+}
+
+.plan img:hover{
+ transform: scale(1.1);
+}
+
+.plan button{
+   margin-top: 5px;
+   text-decoration: none;
+   outline: none;
+   color: rgb(233, 233, 233);
+   padding: 10px 10px;
+   border-radius: 5px;
+   border: none;
+   background-color: rgb(95, 97, 91);
+}
+
+.plan button:hover{
+   background-color: rgba(165, 164, 164, 0.87);
+   color: rgba(17, 17, 16, 0.849);
+   border: 1px solid rgb(143, 143, 143);
+}
+
+/* PLANS END */
+
+
+/* ABOUT START */
+
+.about{
+   height: 100%;
+ background-color: rgba(66, 64, 56, 0.877);
+ padding-bottom: 50px;
+ background-image: linear-gradient(rgba(83, 83, 79, 0.877),rgba(61, 59, 46, 0.75));
+ 
+}
+
+.about h2{
+   margin-top: 40px;
+   text-align: center;
+   color: rgba(255, 255, 255, 0.664);
+
+}
+
+.team{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   text-align: center;
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+
+.team-container1{
+   height: 400px;
+   width: 250px;
+   margin-top: 10px;
+   margin-left: 50px;
+   border-radius: 10px;
+   background-color: rgba(19, 19, 18, 0.856);
+   color: rgba(203, 204, 204, 0.897);
+   margin-right: 35px;
+   
+}
+
+.team-container2{
+   height: 400px;
+   width: 250px;
+   margin-top: 10px;
+   margin-left: 50px;
+   border-radius: 10px;
+   background-color: rgba(19, 19, 18, 0.856);
+   color: rgba(203, 204, 204, 0.897);
+   margin-right: 35px;
+   margin-bottom: 10px;
+   overflow: hidden;
+}
+
+.team-container3{
+   height: 400px;
+   width: 250px;   
+   margin-top: 10px;
+   margin-left: 50px;
+   border-radius: 10px;
+   background-color: rgba(19, 19, 18, 0.856);
+   color: rgba(203, 204, 204, 0.897);
+   margin-right: 35px;;
+}
+
+.team-container4{
+   height: 400px;
+   width: 250px;
+   margin-top: 10px;
+   margin-left: 50px;
+   border-radius: 10px;
+   background-color: rgba(19, 19, 18, 0.856);
+   color: rgba(203, 204, 204, 0.897);
+   margin-right: 35px;
+}
+
+.team-container5{
+   height: 400px;
+   width: 250px;
+   margin-top: 10px;
+   margin-left: 50px;
+   border-radius: 10px;
+   background-color: rgba(19, 19, 18, 0.856);
+   color: rgba(203, 204, 204, 0.897);
+   margin-right: 35px;
+}
+
+.team img{
+   margin-top: 12px;
+   width: 90px; height: 90px;
+   object-fit: cover;
+   border-radius: 5px;
+   opacity: 0.9;
+   border: 1px solid rgba(104, 102, 102, 0.87);
+   border-radius: 50%;
+}
+
+.team h3{
+   margin: 16px 16px;
+   color: rgb(180, 167, 152);
+}
+
+.team p{
+   margin: 16px 0;
+   color: rgb(188, 189, 190);
+}
+
+/* ABOUT END */
+
+
+/* REVIEW START */
+
+ .review{
+   height: 100%;
+
+   display: grid;
+   justify-content: center;
+   text-align: center;
+   background-color: rgba(223, 216, 203, 0.897);
+   background-image: linear-gradient(rgba(46, 44, 35, 0.877),rgba(82, 75, 39, 0.75));
+   padding-bottom: 50px;
+ }
+
+ .review h2{
+   margin-top: 2.5rem;
+   font-weight: bold;
+   color: rgb(218, 218, 218);
+ }
+
+ .review-box{
+   
+   height: 200px;
+   background-color: rgb(66, 55, 40);
+   color: rgb(230, 221, 204);
+   margin-top: 4rem; 
+   border-radius: 20px;
+   justify-content: center;
+   text-align: center;
+   padding: 40px 25px;
+   margin: 33px 15px;
+ }
+
+.review-box h3{
+  margin-top: -15px;
+ 
+}
+
+ .review-box i{
+  margin-top: 15px;
+  color: gold;
+ }
+
+
+/* REVIEW END*/
+
+
+/* CONTACT START*/
+
+ .contact{
+   height: 150px;
+   background-color: rgb(27, 27, 27);
+   text-align: center;
+   justify-content: center;
+   color: rgb(230, 230, 230);
+ }
+
+ .contact h2{
+   margin-top: 25px;
+   margin-bottom: 20px;
+ }
+.contact h4{
+   color: #dbdbdb;
+   margin-bottom: 15px;
+}
+
+.contact a{
+   color: rgb(238, 238, 238);
+   justify-content: space-between;
+   padding: 5px 5px;
+   margin-bottom: 15px;
+}
+
+/* CONTACT END */
+
+
+/* FOOTER START*/
+.footer{
+   height: 40px;
+   justify-content: center;
+   text-align: center;
+   background-color: rgb(14, 14, 14);
+   padding-top: 10px;
+   padding-bottom: 10px;
+   overflow: hidden;
+}
+
+.footer h5{
+   color: white;
+}
+.footer a{
+   margin-top: 15px;
+   color: white;
+}
+
+/* FOOTER END */
+

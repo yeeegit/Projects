@@ -1,0 +1,18 @@
+[
+{
+    "name":"john doe",
+    "department":"web dev",
+    "salary":25
+},
+{
+    "name":"nohn voe",
+    "department":"software dev",
+    "salary":50
+},
+{
+    "name":"dohn coe",
+    "department":" backend dev",
+    "salary":100
+}
+
+]

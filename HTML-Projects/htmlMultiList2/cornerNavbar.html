@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+        }
+
+        body {
+            background-color: #2e2d2d;
+            animation: bgAnim 24s infinite alternate;
+        }
+
+        @keyframes bgAnim {
+            0% {
+                background-color: #aa6600;
+            }
+
+            50% {
+                background-color: #885b29;
+            }
+
+            100% {
+                background-color: #c58700;
+            }
+        }
+
+        #toggle-nav,
+        .navbar a {
+            display: grid;
+            position: absolute;
+            place-items: center;
+            border-radius: 50%;
+        }
+
+        .navbar a {
+            background-color: #5e3500d8;
+            text-decoration: none;
+            font-size: 1.3em;
+            height: 2.6em;
+            width: 2.6em;
+            border: none;
+            color: #e9e9e9;
+            transition: .5s;
+            top: 2em;
+            left: 2em;
+        }
+        .navbar a:hover{
+            background-color: #693c018e;
+            
+        }
+        #toggle-nav {
+            background-color: #583915;
+            color: #fff;
+            height: 4em;
+            width: 4em;
+            border: none;
+            font-size: 1.5em;
+            top: 1em;
+            left: 1em;
+            transition: .3s;
+            cursor: pointer;
+            border: 3px solid transparent;
+        }
+
+        #toggle-nav:hover {
+            border: rgb(224, 224, 224);
+            background-color: #35210a;
+        }
+
+        #toggle-nav:active {
+            opacity: .8;
+        }
+
+        .active {
+            transform: rotate(45deg);
+        }
+        #toggle-nav i {
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#" id="account">
+            <i class="fa-solid fa-user"></i>
+        </a>
+        <a href="#" id="info">
+            <i class="fa-solid fa-info"></i>
+        </a>
+        <a href="#" id="message">
+            <i class="fa-regular fa-comment"></i>
+        </a>
+        <a href="#" id="contact">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <button id="toggle-nav">
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+    </div>
+
+    <script>
+let navToggle = document.getElementById("toggle-nav");
+let navItems = document.querySelectorAll(".navbar a");
+let navActive = false;
+
+navToggle.addEventListener("click",function(){
+    if(!navActive){
+        navItems[0].style.transform = "translate(10em,0)";
+        navItems[1].style.transform = "translate(10em,6em)";
+        navItems[2].style.transform = "translate(6em,10em)";
+        navItems[3].style.transform = "translate(0,10em)";
+        
+        navActive = true;
+        navToggle.classList.add("active");
+    }else{
+        navItems.forEach((navItem) => {
+            navItem.style.transform = "translate(0,0)";
+        });
+        navActive = false;
+        navToggle.classList.remove("active");
+    }
+});
+    </script>
+</body>
+
+</html>
